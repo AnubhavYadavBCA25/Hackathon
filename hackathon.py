@@ -14,12 +14,12 @@ df_state = df_state.drop('Unnamed: 0',axis=1)
 df_long = df_long.drop('Dates',axis=1)
 
 # Map
-st.subheader('Most Power Usage in a particular state',divider='rainbow')
+st.subheader('Most Carbon Emission in a Particular State',divider='rainbow')
 st.map(data=df_long,latitude=df_long['latitude'],longitude=df_long['longitude'])
 
 # Time-series graph
-st.subheader('Power Consumption in Selected State',divider='rainbow')
-option = st.selectbox('Select your State:',df_state.columns)
+st.subheader('Carbon Emission in Selected State',divider='rainbow')
+option = st.selectbox('Select Your State:',df_state.columns)
 st.write('Your State:',option)
 st.line_chart(df_state,x='TimeStamp',y=str(option))
 
