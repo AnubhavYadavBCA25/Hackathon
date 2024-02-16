@@ -23,15 +23,3 @@ option = st.selectbox('Select your State:',df_state.columns)
 st.write('Your State:',option)
 st.line_chart(df_state,x='TimeStamp',y=str(option))
 
-# Pie Chart
-
-st.subheader('Power Usage Percentage Distribution based on Regions',divider='rainbow')
-regions = ["North","South","West","East","Northeast"]
-values = df_long['Regions'].value_counts().tolist()
-
-# Create a pie chart using Plotly Express
-fig = px.pie(values=values, names=regions)
-
-# Display the pie chart in Streamlit
-st.plotly_chart(fig)
-
