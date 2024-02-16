@@ -1,13 +1,11 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
 import plotly.express as px
-import numpy as np
 
 
 # Load datasets
-df_state = pd.read_csv('C:/Users/anu52/Downloads/archive (1)/dataset_tk.csv')
-df_long = pd.read_csv('C:/Users/anu52/Downloads/archive (1)/long_data_.csv')
+df_state = pd.read_csv('dataset_tk.csv')
+df_long = pd.read_csv('long_data_.csv')
 
 # Convert object to timestamp
 df_state['TimeStamp'] = pd.to_datetime(df_state['Unnamed: 0'],format="%d/%m/%Y %H:%M:%S")
