@@ -1,7 +1,5 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px
-
 
 # Load datasets
 df_state = pd.read_csv('dataset_tk.csv')
